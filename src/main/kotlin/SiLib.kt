@@ -20,7 +20,7 @@ class SiLib {
                 return ""
             }
 
-            val prefix = Prefix.entries.toTypedArray().findLast { abs(this) > it.factor } ?: Prefix.NONE
+            val prefix = Prefix.entries.toTypedArray().findLast { abs(this) >= it.factor } ?: Prefix.NONE
 
             return String.format("%.${precision}f %s%s", this / prefix.factor, prefix.symbol, unit.symbol)
         }
