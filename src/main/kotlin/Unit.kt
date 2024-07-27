@@ -1,5 +1,11 @@
 package de.m4rv00
 
 enum class Unit(val symbol: String, val unitName: String) {
-    METER("m", "meter")
+    SECOND("s", "second"),
+    METER("m", "meter"),
+    GRAM("g", "gram"),
+    AMPERE("A", "ampere"),
+    KELVIN("K", "kelvin"),
+    MOL("mol", "mol"),
+    CANDELA("cd", "candela"),
 }
