@@ -1,5 +1,7 @@
 import de.m4rv00.Prefix
 import de.m4rv00.SiLib.Companion.si
+import de.m4rv00.SiLib.Companion.unit
+import de.m4rv00.Unit
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -52,11 +54,24 @@ class SiLibTest {
         assertEquals(0.000_100, 100.0F.si(Prefix.MICRO), tolerance)
     }
 
-
     @Test
     fun testNonePrefix() {
         assertEquals(1.0, 1.si(Prefix.NONE))
         assertEquals(10.0, 10.si(Prefix.NONE))
         assertEquals(100.0, 100.si(Prefix.NONE))
+    }
+
+    @Test
+    fun testMeterUnit() {
+        assertEquals("1.0 m", 1.0.unit(Unit.METER, 1))
+        assertEquals("100.0 nm", 100.0.si(Prefix.NANO).unit(Unit.METER, 1))
+        assertEquals("100.0 km", 100.0.si(Prefix.KILO).unit(Unit.METER, 1))
+    }
+
+     @Test
+    fun testSecondUnit() {
+        assertEquals("100.000 ms", 100.0.si(Prefix.MILLI).unit(Unit.SECOND, 3))
+        assertEquals("100.000000 ms", 100.0.si(Prefix.MILLI).unit(Unit.SECOND, 6))
+        assertEquals("100 nm", 100.0.si(Prefix.NANO).unit(Unit.METER, 0))
     }
 }
