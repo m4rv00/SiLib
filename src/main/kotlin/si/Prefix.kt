@@ -1,4 +1,4 @@
-package de.m4rv00
+package de.m4rv00.si
 
 enum class Prefix(val symbol: String, val factor: Double) {
     YOCTO("y", 1e-24),

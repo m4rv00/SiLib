@@ -1,7 +1,7 @@
-import de.m4rv00.Prefix
-import de.m4rv00.SiLib.Companion.si
-import de.m4rv00.SiLib.Companion.unit
-import de.m4rv00.Unit
+import de.m4rv00.si.Prefix
+import de.m4rv00.si.SiLib.Companion.si
+import de.m4rv00.si.SiLib.Companion.unit
+import de.m4rv00.si.Unit
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

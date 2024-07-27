@@ -1,4 +1,4 @@
-package de.m4rv00
+package de.m4rv00.si
 
 enum class Unit(val symbol: String, val unitName: String) {
     SECOND("s", "second"),
